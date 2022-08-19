@@ -1,0 +1,74 @@
+.equipment_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title_png {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('../assets/music_home_studio.png');
+    background-size: 100% 100%;
+    width: 120vh;
+    height: 65vh;
+    border-width: 20rem;
+    border-radius: 2rem;
+    border-color: aliceblue;
+}
+
+.row_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.col_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.description {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+.png {
+    background-color: rgb(58, 93, 110);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.grid_pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.column_pictures {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row_pictures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cpu_gear_png {
+    width: 12rem;
+}
+
+.prod_gear_png {
+    width: 12rem;
+}
+
+.guitar_png {
+    height: 30rem;
+}

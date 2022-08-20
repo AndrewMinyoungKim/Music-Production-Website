@@ -16,25 +16,59 @@ const Sidebar = ({pageName, callback}) => {
                 <li>Once more</li>
             </>)
         }
-        else if(page === 'about') {
+        else if(page === 'equipment') {
             return(<>
-                <li>About Us</li>
-                <li>Inspirations</li>
-                <li>The Future</li>
-            </>)
-        }
-        if(page === 'equipment') {
-            return(<>
-                <HashLink smooth to='/equipment#cpu'>Computer Equipment</HashLink>
-                <HashLink smooth to='/equipment#prod'>Music Production Equipment</HashLink>
-                <HashLink smooth to='/equipment#music'>Additional Music Equipment</HashLink>
+                <h6 className={styles.sidebar_text} onClick={() => {window.scrollTo({top: 0, behavior: 'smooth'});}}>Equipment</h6>
+                <HashLink smooth to='/equipment#cpu' className={styles.sidebar_text}>Computer Equipment</HashLink>
+                <div>
+                    <HashLink smooth to='/equipment#hardware' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Hardware</HashLink>
+                    <HashLink smooth to='/equipment#software' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Software</HashLink>
+                </div>
+                <HashLink smooth to='/equipment#prod' className={`${styles.sidebar_text}`}>Music Production Equipment</HashLink>
+                <div>
+                    <HashLink smooth to='/equipment#output' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Output</HashLink>
+                    <HashLink smooth to='/equipment#input' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Input</HashLink>
+                    <HashLink smooth to='/equipment#adapter' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Adapters</HashLink>
+                </div>
+                <HashLink smooth to='/equipment#music' className={styles.sidebar_text}>Additional Music Equipment</HashLink>
             </>)
         }
         else if(page === 'ableton') {
             return(<>
-                <HashLink smooth to="/ableton#intro">DAW</HashLink>
-                <Link to="/ableton">Interface</Link>
-                <Link to="/ableton">VST</Link>
+                <HashLink smooth to="/ableton#intro" className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>DAW</HashLink>
+                <HashLink smooth to="/ableton" className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Interface</HashLink>
+                <HashLink smooth to="/ableton" className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>VST</HashLink>
+            </>)
+        }
+        else if(page === 'arrangement') {
+            return(<>
+                <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_text}`}>Sections</HashLink>
+                <div>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Intro/Outro</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Verse</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Section Transitions/Silence</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Pre-Chorus</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Chorus</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Post-Chorus</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Transition/Interlude</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Solo/Break</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Bridge</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Faux/Final Chorus</HashLink>
+                </div>
+                <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_text}`}>Components</HashLink>
+                <div>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Drums</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Bass</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>VOX</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>FX</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Instrumentation:</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Synths</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Guitar/Strings</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Brass</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Woodwinds</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Xylopones</HashLink>
+                    <HashLink smooth to='/arrangmement#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Anything! Sound Design!</HashLink>
+                </div>
             </>)
         }
     }

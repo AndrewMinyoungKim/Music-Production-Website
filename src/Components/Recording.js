@@ -1,25 +1,16 @@
-import React, { useState } from 'react';
-import styles from "./Equipment.module.css";
+import React from 'react';
 import Sidebar from './Sidebar';
 import './styles.css';
+import styles from './Equipment.module.css';
 
-const Equipment = (props) => {
-
-    const [modalActive, setModalActive] = useState(false);
-
-    const toggleModal = (event) => {
-        setModalActive(modalActive => !modalActive);
-        console.log(setModalActive);
-        event.currentTarget.classList.toggle('hidden');
-    };
-    
-    return(<>
-        <div className={`main_side_layout ${styles.equipment}`}>
-            <Sidebar pageName='equipment'/>
-            <div className={`main_container ${styles.equipment_container}`}>
+const Recording = () => {
+  return (<>
+    <div className={`main_side_layout ${styles.equipment}`}>
+      <Sidebar pageName='recording'/>
+      <div className={`main_container ${styles.equipment_container}`}>
                 {/* Title */}
                 <div id={styles.title_png}>
-                    <h1 className='page_title'>Equipment</h1>
+                    <h1 className='page_title'>Recording</h1>
                 </div>
                 {/* Computer Gear */}
                 <div>
@@ -29,18 +20,9 @@ const Equipment = (props) => {
                         <div className={styles.description}>
                             <p>You're going to need a computer, whether it be a Desktop or Laptop, PC or Mac</p>
                             <p>You're going to need the essentials, including the computer itself, and then a keyboard and mouse if it's not included</p>
-                            
-                            {/* MODAL */}
-                            <div className="modal">
-                                <button className="close-modal">&times;</button>
-                                <h1>TITLE YES</h1>
-                                <p className="hidden">Woo! Happy happy! I’m happy for you! I do the Billie Jean dance in your honour! Congrats! I hope you enjoy this high and have a grand old time!</p>
-                            </div>
-                            {/* END MODAL */}
                         </div>
                         <div className={`${styles.png}`}>
-                            {/* MODAL ONCLICK */}
-                            <img alt='imac' className={`${styles.cpu_gear_png}`} src={require('../assets/imac.png')} onClick={toggleModal}/>
+                            <img alt='imac' className={`${styles.cpu_gear_png}`} src={require('../assets/imac.png')}/>
                         </div>
                     </div>
                     <div className={styles.row_section}>
@@ -137,8 +119,8 @@ const Equipment = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
-    </>);
+    </div>
+  </>)
 }
 
-export default Equipment;
+export default Recording

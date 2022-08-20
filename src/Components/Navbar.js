@@ -87,19 +87,34 @@ const Navbar = () => {
                 </NavLink>
                 <Bars />
                 <NavMenu>
-                    <NavLink to="/about" activeStyle>
-                        About
-                    </NavLink>
-                    <NavLink to="/equipment" activeStyle>
+                    <NavLink to="/equipment">
                         Equipment
                     </NavLink>
-                    <NavLink to="/ableton" activeStyle>
+                    <NavLink to="/ableton">
                         Ableton
+                    </NavLink>
+                    <NavLink to="/arrangement">
+                        Arrangement
+                    </NavLink>
+                    <NavLink to="/recording">
+                        Recording
+                    </NavLink>
+                    <NavLink to="/production">
+                        Production
+                    </NavLink>
+                    <NavLink to="/effects">
+                        Effects
+                    </NavLink>
+                    <NavLink to="/mixmaster">
+                        Mix/Master
+                    </NavLink>
+                    <NavLink to="/sounddesign">
+                        Sound Design
                     </NavLink>
                 </NavMenu>
                 
                 <div className='search-bar'>
-                    <input id='search' type='text'/>
+                    <input id='search' type='text' style={{position: "absolute", float: "right", margin: "2vh"}}/>
                 </div>
             </Nav>
         </>

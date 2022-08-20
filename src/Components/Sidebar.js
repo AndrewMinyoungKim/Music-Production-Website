@@ -71,6 +71,73 @@ const Sidebar = ({pageName, callback}) => {
                 </div>
             </>)
         }
+        else if(page === 'recording') {
+            return(<>
+                <HashLink smooth to='/recording#' className={styles.sidebar_text}>Audio</HashLink>
+                <div>
+                    <HashLink smooth to='/recording#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Microphone (XLR)</HashLink>
+                    <HashLink smooth to='/recording#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Instrument (1/4 inch)</HashLink>
+                </div>
+                <HashLink smooth to='/recording#' className={styles.sidebar_text}>MIDI</HashLink>
+            </>)
+        }
+        else if(page === 'production') {
+            return(<>
+                <HashLink smooth to='/production#' className={styles.sidebar_text}>Using Tracks</HashLink>
+                <div>
+                    <HashLink smooth to='/production#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Auxiliary/Return/Send, Group, Bus</HashLink>
+                </div>
+                <HashLink smooth to='/production#' className={styles.sidebar_text}>Sampling</HashLink>
+                <div>
+                    <HashLink smooth to='/production#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Modulation</HashLink>
+                </div>
+            </>)
+        }
+        else if(page === 'effects') {
+            return(<>
+                <HashLink smooth to='/effects#' className={styles.sidebar_text}>Audio Effects</HashLink>
+                <div>
+                    <HashLink smooth to='/effects#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Reverb</HashLink>
+                    <HashLink smooth to='/effects#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Delay</HashLink>
+                    <HashLink smooth to='/effects#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>EQ</HashLink>
+                    <HashLink smooth to='/effects#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Compression</HashLink>
+                    <HashLink smooth to='/effects#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Sidechain</HashLink>
+                    <HashLink smooth to='/effects#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Sidechain</HashLink>
+                </div>
+                <HashLink smooth to='/effects#' className={styles.sidebar_text}>MIDI Effects</HashLink>
+                <div>
+                    <HashLink smooth to='/effects#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Arp</HashLink>
+                </div>
+                <HashLink smooth to='/effects#' className={styles.sidebar_text}>Auxiliary, Bus, Group</HashLink>
+                <div>
+                    <HashLink smooth to='/effects#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>Parallel Compression</HashLink>
+                </div>
+            </>)
+        }
+        else if(page === 'mixmaster') {
+            return(<>
+                <HashLink smooth to='/mixmaster#' className={styles.sidebar_text}>Mixing</HashLink>
+                <HashLink smooth to='/mixmaster#' className={styles.sidebar_text}>Mastering</HashLink>
+                <div>
+                    <HashLink smooth to='/mixmaster#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>stuff</HashLink>
+                </div>
+            </>)
+        }
+        else if(page === 'sounddesign') {
+            return(<>
+                <HashLink smooth to='/sounddesign#' className={styles.sidebar_text}>Waves</HashLink>
+                <HashLink smooth to='/sounddesign#' className={styles.sidebar_text}>Filter</HashLink>
+                <HashLink smooth to='/sounddesign#' className={styles.sidebar_text}>ADSR</HashLink>
+                <HashLink smooth to='/sounddesign#' className={styles.sidebar_text}>LFO</HashLink>
+                <HashLink smooth to='/sounddesign#' className={styles.sidebar_text}>Noise</HashLink>
+                <HashLink smooth to='/sounddesign#' className={styles.sidebar_text}>Synthesis</HashLink>
+                <HashLink smooth to='/sounddesign#' className={styles.sidebar_text}>Effects</HashLink>
+                <HashLink smooth to='/sounddesign#' className={styles.sidebar_text}>Modulation</HashLink>
+                <div>
+                    <HashLink smooth to='/sounddesign#' className={`${styles.sidebar_sub} ${styles.sidebar_text}`}>stuff</HashLink>
+                </div>
+            </>)
+        }
     }
 
     useEffect(() => {

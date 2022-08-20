@@ -6,7 +6,7 @@ import styles from './Equipment.module.css';
 const Effects = () => {
   return (<>
     <div className={`main_side_layout ${styles.equipment}`}>
-      <Sidebar pageName='effect'/>
+      <Sidebar pageName='effects'/>
       <div className={`main_container ${styles.equipment_container}`}>
                 {/* Title */}
                 <div id={styles.title_png}>
